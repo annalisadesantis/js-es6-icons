@@ -97,11 +97,13 @@ $(document).ready(function() {
         },
     ];
 
-    icone.forEach((item) => {
-        console.log(item);
+    // Creo un ciclo foreach per ciclare l'array icone
+    icone.forEach((icona) => {
 
-        const {nome, prefisso, famiglia} = item;
+        // Destrutturo il singolo oggetto per ricavare le chiavi come varibiali
+        const {nome, prefisso, famiglia} = icona;
 
+        // Stampo in pagina le icone con l'aiuto delle varibili ricavate dalla destrutturazione
         $(".container-all-icons").append(`
            <div class="icone">
               <i class="${famiglia} ${prefisso}${nome} fa-2x"></i>

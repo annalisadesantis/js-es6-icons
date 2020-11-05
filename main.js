@@ -131,6 +131,39 @@ $(document).ready(function() {
         `);
     });
 
+    // Intercetto il cambio di opzione nel menu a tendina con la funzione change
+    $(".tendina").change(() => {
+        // Creo una varibile per salvare il valore di value nel menu a tendina
+        let tipo_selezionato = $(".tendina").val();
+
+        // Svuto nel DOM il contenitore delle icone
+        $(".container-all-icons").empty();
+
+        // Se l'utente ha selezionato qualcosa di diverso da stringa vuota
+        if(tipo_selezionato != " ") {
+
+            // Creo una nuova varibile scelta che filtra l'array icone e mi restituisce che tipo_selezionato deve essere uguale a ogni singolo oggetto con la varibile tipo
+            const scelta_icone = icone.filter((icona) => {
+                return tipo_selezionato == icona.tipo;
+            });
+            // Faccio un ciclo foreach per ciclare il nuovo array creato da filter dove ci sono sono SOLO le icone con il tipo selezionato dall'utente
+            scelta_icone.forEach((icona) => {
+                stampo_icone(icona);
+            });
+
+        }else{
+            // Se l'utente ha selezionato la voce tutte le icone allora siccome precedentemente abbiamo svuotato il suo contenitore dobbiamo stamparle tutte nuovamente
+            stampo_all_icone(icone);
+        }
+
+    });
+
+    // Creo una funzione generica per stampare nuovamente le icone in pagina utilizzando la funzione stampo_icone
+    function stampo_all_icone(icone_array) {
+        icone_array.forEach((element) => {
+            stampo_icone(element);
+        });
+    }
 
     // Creo una funzione generica per stampare le icone in pagina con il loro indice di colore
     function stampo_icone(element){

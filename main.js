@@ -22,6 +22,94 @@
 
 $(document).ready(function() {
 
+    let icone = [
+        {
+            nome: "ambulance",
+            prefisso: "fa-",
+            tipo: "mezzi",
+            famiglia: "fas",
+        },
+        {
+            nome: "car-alt",
+            prefisso: "fa-",
+            tipo: "mezzi",
+            famiglia: "fas",
+        },
+        {
+            nome: "motorcycle",
+            prefisso: "fa-",
+            tipo: "mezzi",
+            famiglia: "fas",
+        },
+        {
+            nome: "truck",
+            prefisso: "fa-",
+            tipo: "mezzi",
+            famiglia: "fas",
+        },
+        {
+            nome: "hat-cowboy",
+            prefisso: "fa-",
+            tipo: "vestiti",
+            famiglia: "fas",
+        },
+        {
+            nome: "mitten",
+            prefisso: "fa-",
+            tipo: "vestiti",
+            famiglia: "fas",
+        },
+        {
+            nome: "tshirt",
+            prefisso: "fa-",
+            tipo: "vestiti",
+            famiglia: "fas",
+        },
+        {
+            nome: "socks",
+            prefisso: "fa-",
+            tipo: "vestiti",
+            famiglia: "fas",
+        },
+        {
+            nome: "apple-alt",
+            prefisso: "fa-",
+            tipo: "cibo",
+            famiglia: "fas",
+        },
+        {
+            nome: "carrot",
+            prefisso: "fa-",
+            tipo: "cibo",
+            famiglia: "fas",
+        },
+        {
+            nome: "fish",
+            prefisso: "fa-",
+            tipo: "cibo",
+            famiglia: "fas",
+        },
+        {
+            nome: "ice-cream",
+            prefisso: "fa-",
+            tipo: "cibo",
+            famiglia: "fas",
+        },
+    ];
+
+    icone.forEach((item) => {
+        console.log(item);
+
+        const {nome, prefisso, famiglia} = item;
+
+        $(".container-all-icons").append(`
+           <div class="icone">
+              <i class="${famiglia} ${prefisso}${nome} fa-2x"></i>
+              <span>${nome}</span>
+           </div>
+       `);
+
+    });
 
 
 });

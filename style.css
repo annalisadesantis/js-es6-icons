@@ -6,4 +6,23 @@
 
 body{
     font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-all-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    margin: 30px;
+    padding: 30px;
+    border: 2px solid #fe5a1d;
+    background-color: #ffa07a;
+}
+
+.icone{
+    margin: 20px;
 }

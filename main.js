@@ -119,7 +119,16 @@ $(document).ready(function() {
     // Creo un ciclo foreach per ciclare l'array icone
     icone.forEach((icona) => {
         // Applico la funzione che abbiamo precedentemente creato per stampare le icone in pagina (compresa di destrutturazione chiavi, indice del colore e template literal)
-        stampo_icone(icona); 
+        stampo_icone(icona);
+    });
+
+
+    // Scorro l'array di tipi di icone
+    tipi_icone.forEach((tipo) => {
+        // Ad ogni tipo di icona creo l'option nel DOM
+        $(".tendina").append(`
+        <option value="${tipo}">${tipo}</option>
+        `);
     });
 
 
